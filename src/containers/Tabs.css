@@ -1,0 +1,78 @@
+/* Contenedor principal de tabs */
+.tabs-container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  background-color: black;
+}
+
+/* Cabecera de pestañas */
+.tabs-header {
+  display: flex;
+  position: relative;
+  background-color: black;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+/* Botones de pestañas */
+.tab-button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #666;
+  font-size: 14px;
+}
+
+.tab-button:hover {
+  background-color: black
+  color: #333;
+}
+
+.tab-button.active {
+  font-weight: bold;
+  color: #ff0188;
+  background-color: black
+}
+
+/* Indicador animado debajo de la pestaña activa */
+.tab-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ff0188;
+  border-radius: 2px;
+}
+
+/* Contenido de pestañas */
+.tabs-content {
+  padding: 1rem;
+  background-color:black;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación del contenido - manejada por Framer Motion */
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tabs-container {
+    max-width: 100%;
+    margin: 10px;
+  }
+  
+  .tab-button {
+    padding: 0.8rem 0.5rem;
+    font-size: 13px;
+  }
+  
+  .tabs-content {
+    padding: 0.5rem;
+  }
+}
