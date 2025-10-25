@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Weather from "./Weather.jsx";
+import Forecast from "./Forecast.jsx";
 import "./Tabs.css";
 
-const Tabs = () => {
+export default function Tabs({ weatherData }) {
   const [activeTab, setActiveTab] = useState("tab1");
 
   const tabs = [
-    { id: "tab1", label: "Clima actual", content: <Weather /> },
-    { id: "tab2", label: "15 días", content: <></> },
+    { id: "tab1", label: "Clima actual", content: <Weather {...weatherData} /> },
+    { id: "tab2", label: "15 días", content: <Forecast {...weatherData} /> },
     { id: "tab3", label: "About", content: <></> },
   ];
 
@@ -57,5 +58,3 @@ const Tabs = () => {
     </div>
   );
 };
-
-export default Tabs;

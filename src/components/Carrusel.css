@@ -1,0 +1,86 @@
+/* Contenedor principal del carrusel */
+.carousel-container {
+  width: 320px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Card del carrusel con contenido */
+.carousel-card {
+  background: #41001e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Botón de navegación base */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover effect para botones */
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Botón anterior (izquierda) */
+.carousel-button-prev {
+  left: 10px;
+}
+
+/* Botón siguiente (derecha) */
+.carousel-button-next {
+  right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 280px;
+    margin: 30px auto;
+  }
+  
+  .carousel-card {
+    padding: 1.5rem;
+  }
+  
+  .carousel-button {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}
+
+
+.p-title-text {
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 8px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #ff0188;
+}   
+
+.span-text {
+    font-family: 'Afacad', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 6px;
+    color: #ffffff;
+}   
