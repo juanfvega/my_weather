@@ -6,6 +6,16 @@ import "./Carrusel.css";
 const Carousel = ({ days }) => {
   const [index, setIndex] = useState(0);
 
+  // Función para formatear fecha de "2025-10-02" a "2 Octubre"
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const month = months[date.getMonth()];
+    return `${day} ${month}`;
+  };
+
   // Avanza automáticamente cada 3 segundos
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,10 +44,10 @@ const Carousel = ({ days }) => {
           className="carousel-card"
         >
 
-          <p className="p-title-text">Temp:<span className="span-text">{days[index].temp}</span></p>
-          <p className="p-title-text">Max:<span className="span-text">{days[index].tempmax}</span></p>
-          <p className="p-title-text">Date:<span className="span-text">{days[index].datetime}</span></p>
-          <p className="p-title-text">Min:<span className="span-text">{days[index].tempmin}</span></p>
+          <p className="p-title-text">Fecha:<span className="span-text">{formatDate(days[index].datetime)}</span></p>
+          <p className="p-title-text">Temp:<span className="span-text">{days[index].temp} C°</span></p>
+          <p className="p-title-text">Max:<span className="span-text">{days[index].tempmax} C°</span></p>
+          <p className="p-title-text">Min:<span className="span-text">{days[index].tempmin} C°</span></p>
 
         </motion.div>
       </AnimatePresence>

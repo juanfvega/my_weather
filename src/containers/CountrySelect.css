@@ -1,0 +1,254 @@
+/* Estilos para CountrySelect Component */
+
+.country-select-container {
+  padding: 20px;
+  background: #ff0188;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'afacad', sans-serif;
+}
+
+.country-select-title {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Autocomplete personalizado */
+.country-autocomplete {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.country-autocomplete .MuiOutlinedInput-root {
+  background-color: white;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.country-autocomplete .MuiOutlinedInput-root:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.country-autocomplete .MuiOutlinedInput-root.Mui-focused {
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
+}
+
+.country-autocomplete .MuiInputLabel-root {
+  color: black;
+  font-weight: 2px;
+  font-size: 8px;
+  transform: translateY(-10px);
+  
+}
+
+.country-autocomplete .MuiInputLabel-root.Mui-focused {
+  color: black;
+}
+
+/* Opciones del dropdown */
+.country-option {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #e30078;
+  transition: all 0.2s ease;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.country-option:hover {
+  background-color: #e30078 !important;
+  transform: translateX(4px);
+}
+
+.country-option img {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px #e30078;
+}
+
+/* Información del país seleccionado */
+.selected-country-info {
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 2px solid #e30078;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px #e30078;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.selected-country-info h3 {
+  color: #e30078;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e30078;
+  padding-bottom: 8px;
+}
+
+.country-detail {
+  margin: 12px 0;
+  padding: 8px 12px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 6px;
+  border-left: 4px solid #e30078;
+}
+
+.country-detail strong {
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.country-detail-value {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+/* Botón personalizado */
+.weather-button {
+  background: linear-gradient(125deg, #ff0188 70%, #e30078 100%) !important;
+  color: black !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  box-shadow: 0 4px 15px #be0064 !important;
+  transition: all 0.3s ease !important;
+  margin-top: 16px !important;
+}
+
+.weather-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px #e30078 !important;
+}
+
+.weather-button:disabled {
+  background: linear-gradient(135deg, #a0a0a0 0%, #808080 100%) !important;
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Datos del clima */
+.weather-data-container {
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 2px solid rgba(227, 0, 120, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.weather-data-container h3 {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-bottom: 2px solid black;
+  padding-bottom: 8px;
+}
+
+.weather-data-pre {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  color: #2d3748;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+/* Loading animation */
+.loading-text {
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .country-select-container {
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 95%;
+  }
+  
+  .country-select-title {
+    font-size: 20px;
+  }
+  
+  .country-autocomplete {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .selected-country-info,
+  .weather-data-container {
+    max-width: 100%;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .country-select-container {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  }
+  
+  .selected-country-info,
+  .weather-data-container {
+    background: rgba(45, 55, 72, 0.9);
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  
+  .selected-country-info h3,
+  .weather-data-container h3 {
+    color: #90cdf4;
+  }
+  
+  .country-detail {
+    background: rgba(102, 126, 234, 0.1);
+    border-left-color: #90cdf4;
+  }
+  
+  .country-detail strong {
+    color: #e2e8f0;
+  }
+  
+  .country-detail-value {
+    color: #cbd5e0;
+  }
+  
+  .weather-data-pre {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+}

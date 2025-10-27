@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Weather from "./Weather.jsx";
 import Forecast from "./Forecast.jsx";
 import "./Tabs.css";
+import CountrySelect from "./CountrySelect.jsx";
+import About from "../components/About.jsx";
 
 export default function Tabs({ weatherData }) {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -10,7 +12,8 @@ export default function Tabs({ weatherData }) {
   const tabs = [
     { id: "tab1", label: "Clima actual", content: <Weather {...weatherData} /> },
     { id: "tab2", label: "15 días", content: <Forecast {...weatherData} /> },
-    { id: "tab3", label: "About", content: <></> },
+    { id: "tab3", label: "Search by Country", content: <CountrySelect /> },
+    { id: "tab4", label: "About", content: <About /> },
   ];
 
   return (
