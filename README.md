@@ -1,6 +1,6 @@
 # 🌤️ Weather App
 
-Una aplicación web moderna para consultar información climática de cualquier país del mundo.
+Una aplicación web para consultar información climática de cualquier país del mundo.
 
 ## 🎬 Demo en funcionamiento
 ![Demo de la aplicación](https://raw.githubusercontent.com/juanfvega/my_weather/main/demo/small-demo.gif)
@@ -48,6 +48,3 @@ npm run dev
 
 ## 🌐 API Key
 Para usar la aplicación necesitas obtener una API key gratuita de [Visual Crossing Weather](https://www.visualcrossing.com/weather-api)
-
-## 📄 Licencia
-Este proyecto está bajo la Licencia MIT.
