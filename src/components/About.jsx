@@ -9,7 +9,6 @@ const About = () => {
                     <h1 className="about-title">About Us</h1>
                     <div className="about-subtitle">
                         <span className="weather-icon">🌤️</span>
-                        Your trusted weather companion
                     </div>
                 </div>
                 
@@ -17,11 +16,6 @@ const About = () => {
                     <p className="about-intro">
                         Welcome to our Weather App! We are dedicated to providing you with 
                         accurate and up-to-date weather information for locations around the world.
-                    </p>
-                    
-                    <p className="about-mission">
-                        Our mission is to deliver reliable weather forecasts that help you plan 
-                        your day, week, and travels with confidence.
                     </p>
                 </div>
                 
