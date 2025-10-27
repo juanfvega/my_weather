@@ -3,7 +3,7 @@
 Una aplicación web moderna para consultar información climática de cualquier país del mundo.
 
 ## 🎬 Demo en funcionamiento
-![Demo de la aplicación](./demo/small-demo.gif)
+![Demo de la aplicación](https://raw.githubusercontent.com/juanfvega/my_weather/main/demo/small-demo.gif)
 
 ## 📸 Screenshots
 
